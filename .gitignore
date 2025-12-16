@@ -5,6 +5,7 @@ venv/
 secrets.json
 token.pickle
 credentials.json
+processed_notes.json
 
 # Byte-compiled / cache files
 __pycache__/

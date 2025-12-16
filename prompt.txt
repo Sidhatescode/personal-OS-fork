@@ -1,27 +1,93 @@
-Please classify this email as either:
+You are processing a note for a personal knowledge system.
 
-ATTN: emails that are clearly from a real person that wanted to reach out to me for a specific reason. you can also place high value notifcations here/ time sensitive. 
-FK-U: a special place in hell is for these people. people trying to sell me stuff via their annoying email funnel or scam/phish me (ex. "what's your phone number")
-MARKETING: classic marketing emails from companies. safe to ignore type stuff. stuff like ny times/bloomberg type stuff fits in here.
-TAKE-A-LOOK: notification style emails that i should look at quickly ex flight updates, bank updats, bills, etc.
-HMMMM: if you really aren't sure where to put it. dont put newsletter from builder type individuals in here, i prefer them in attn.
+The note belongs to a founder and creator whose primary goal is to compound learning, skills, and leverage over time.
 
+Date received: {note_date}
 
-My basic bio:
-- [enter your name and 3-4 lines about yourself here]
+Original note content:
+{note_content}
 
-Some context on my preferences:
-- i dont care for news type emails/world updates.
-- i sometimes get investor updates/newsletters where people update me on their progress/life i like this deserves ATTN.
-- i get a lot of random builders/founders hit me up. i love that! but hate when its obviously no a personalized email to me. if unsure drop in HMMMM. its okay if these emails are 90+ days old. its better to reply to them vs not reply.
-- i like to read breif emails on an ai/ tech companies latest feature (ex. new drop from openai), while these are marketing, i'd like them in TAKE-A-LOOK. but, if this type of email is 14+ days old just put it in MARKETING.
-- emails/threads that seem important but seem to be concluded should be put in TAKE-A-LOOK so i can view them later to make sure.
-- Generally, if emails are referencing someone else it means the sender is stupid as hell and messed up their automatic email script lol.
+YOUR TASK:
+1. Split this note into ATOMIC pieces (one clear idea per piece)
+2. Keep the EXACT original wording - DO NOT rewrite or paraphrase
+3. Categorize each atomic note based on alignment with the user's goals
+4. Add semantic tags that capture the underlying idea and how it might be reused
 
-From: {sender}
-Subject: {subject}
-Content: {content}
-Date Sent: {email_date}
+USER'S PRIMARY GOALS:
+1. Build world-class skill in copywriting, persuasion, storytelling, and communication
+2. Build and grow projects, especially Cold Email Hall of Fame (coldemails.world) - a newsletter + community teaching elite cold emails
+3. Become highly effective at execution, relationship-building, and high-agency action
+4. Capture inspiration and swipe material to fuel writing, marketing, films, and ideas
 
-Provide your classification and a brief explanation why in JSON format:
-{{"classification": "ATTN/FK-U/MARKETING/TAKE-A-LOOK/HMMMM", "reason": "your explanation here"}} 
+CATEGORIES (notes can belong to multiple):
+
+1) Logistics/Action
+   - To-dos, reminders, follow-ups, operational notes, things to execute later
+   - Examples: "Email Sarah about project", "Test Zapier automation"
+
+2) Skill Building
+   - Learnings, examples, frameworks, or resources related to: copywriting, persuasion, storytelling, filmmaking, videography, leadership
+   - Examples: "Best cold emails sound human, not like a marketer", "Dialogue pacing technique from Sorkin"
+
+3) Projects
+   - Notes directly related to active or future projects
+   - Especially Cold Email Hall of Fame, newsletters, communities, content, products, or experiments
+   - Examples: "Newsletter idea: anatomy of a $1M cold email"
+
+4) Hacks & Tools (Goal-Aligned)
+   - Prompts, workflows, tools, or shortcuts
+   - Only categorize as a hack if it clearly improves skills, execution, or project outcomes
+   - Examples: "GPT prompt for rewriting subject lines", "Notion template for tracking outreach"
+
+5) Swipe File (HIGH PRIORITY)
+   - Inspiring material worth revisiting: quotes, movies, scenes, articles, stories, ads, subject lines, emails, metaphors, hooks, ideas
+   - These are inputs for future writing, content, and creative output
+   - Examples: "The Social Network dialogue", "Great cold email hook I saw", "Metaphor about compound interest"
+
+6) Personal Development & Productivity
+   - Reflections, mental models, mindset shifts, productivity insights, emotional regulation, stress awareness, discipline, identity, perspective
+   - Examples: "Realized I work best in morning sprints", "Identity shift: from executor to builder"
+
+7) Relationship Building
+   - Notes about people, follow-ups, social insights, networking, trust-building, communication dynamics
+   - Examples: "John mentioned he's interested in cold email", "Need to intro Sarah to Mike"
+
+CATEGORIZATION RULES:
+- Prefer semantic meaning over literal keywords
+- One note can belong to multiple categories
+- Always bias toward usefulness for future writing, projects, or decision-making
+- Extract concrete, reusable insights when possible
+- If a note contains both a task AND an insight, split them into separate atomic notes
+
+TAGGING RULES:
+- Generate 2-5 concise semantic tags per note
+- Tags should capture:
+  * The underlying idea (not just keywords)
+  * The skill or leverage involved
+  * How it might be reused later
+- Good tags: "authenticity-in-writing", "cold-email-technique", "persuasion-framework", "follow-up-action"
+- Bad tags: "email", "write", "idea" (too generic)
+
+CONTEXT FIELD:
+- Briefly explain WHY this note matters
+- How does it support the user's goals?
+- When might they want to retrieve this?
+
+Return a JSON object with this structure:
+{{
+  "atomic_notes": [
+    {{
+      "original_text": "exact text from the note - DO NOT PARAPHRASE",
+      "categories": ["category1", "category2"],
+      "tags": ["semantic-tag-1", "semantic-tag-2", "semantic-tag-3"],
+      "context": "brief explanation of why this matters and how it supports goals"
+    }}
+  ]
+}}
+
+CRITICAL RULES:
+- Preserve original wording EXACTLY - no rewrites, no paraphrasing
+- Split into atomic pieces (one clear thought per note)
+- Every note must have at least one category
+- Tags should be hyphenated and semantic (describe the idea, not just keywords)
+- The goal is long-term retrieval, reuse, and compounding insight - not neat storage
