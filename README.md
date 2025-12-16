@@ -1,9 +1,7 @@
 # personal-os
 A simple Python script to categorize your notes,thoguhts,ideas,reflections etc with AI + a custom prompt you set.
 
-ignore bewlo (to be changed)
-
-![Alt text](https://i.imgur.com/QVF3yVX.gif)
+ignore below (to be changed)
 
 1. `git clone https://github.com/farzaa/stupid-emails.git`
 2. `cd stupid-emails`
