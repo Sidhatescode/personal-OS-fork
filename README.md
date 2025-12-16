@@ -1,5 +1,7 @@
-# stupid-emails
-A simple Python script to tag your G-Mail with AI + a custom prompt you set.
+# personal-os
+A simple Python script to categorize your notes,thoguhts,ideas,reflections etc with AI + a custom prompt you set.
+
+ignore bewlo (to be changed)
 
 ![Alt text](https://i.imgur.com/QVF3yVX.gif)
 
